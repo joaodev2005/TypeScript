@@ -1,13 +1,33 @@
-let x: number = 10;
+// 1 = NUMBER
 
-console.log(x)
+// let x: number = 10;
 
-x = 5657;
+// console.log(x)
 
-const y: number = 1.0999;
+// x = 5657;
 
-console.log(typeof y)
+// const y: number = 1.0999;
 
-console.log(y)
+// console.log(typeof y)
 
-console.log(y.toPrecision(3))
+// console.log(y)
+
+// console.log(y.toPrecision(3))
+
+// 2 = STRING
+
+// const firstName: string = 'João';
+
+// console.log(firstName.toUpperCase());
+
+// let fullName: string
+
+// const lastName: string = 'Magnun';
+
+// fullName = `${firstName} ${lastName}`;
+
+// console.log(fullName);
+
+// 3 = BOOLEAN
+
+
