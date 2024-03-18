@@ -8,5 +8,5 @@ function greeting(name: string) {
 }
 
 greeting(firstName);
-greeting(x);
-greeting(anotherName);
+// greeting(x);
+// greeting(anotherName);
