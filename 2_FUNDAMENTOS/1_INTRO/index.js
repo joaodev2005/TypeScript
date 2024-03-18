@@ -7,9 +7,13 @@
 // console.log(y)
 // console.log(y.toPrecision(3))
 // 2 = STRING
-var firstName = 'João';
-console.log(firstName.toUpperCase());
-var fullName;
-var lastName = 'Magnun';
-fullName = "".concat(firstName, " ").concat(lastName);
-console.log(fullName);
+// const firstName: string = 'João';
+// console.log(firstName.toUpperCase());
+// let fullName: string
+// const lastName: string = 'Magnun';
+// fullName = `${firstName} ${lastName}`;
+// console.log(fullName);
+// 3 = BOOLEAN
+var a = true;
+console.log(a);
+console.log(typeof a);
