@@ -8,4 +8,4 @@ numbers.push(5);
 const names = ["João", "Maria"];
 names.push("Joaquim");
 names.push("Pedro");
-console.log(names);
+// console.log(names)

@@ -15,4 +15,4 @@ const names: string[] = ["João", "Maria"];
 names.push("Joaquim");
 names.push("Pedro");
 
-console.log(names)
+// console.log(names)
