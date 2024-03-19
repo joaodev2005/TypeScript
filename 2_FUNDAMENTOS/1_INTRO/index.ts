@@ -44,3 +44,16 @@ let inf = 'João';
 
 // ann = 2;
 // inf = 2;
+
+console.log('testando');
+
+const firstName: string = 'João';
+const lastName: string = 'Magnun';
+
+console.log(firstName.toUpperCase() + ' ' + lastName.toUpperCase());
+
+const nameFriend: string = 'Joaquim';
+const lastNameFriend: string = 'Silva';
+let friend: string = `${nameFriend} ${lastNameFriend}`;
+
+console.log(friend);

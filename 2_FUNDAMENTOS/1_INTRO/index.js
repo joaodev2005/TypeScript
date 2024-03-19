@@ -1,3 +1,4 @@
+"use strict";
 // 1 = NUMBER
 // let x: number = 10;
 // console.log(x)
@@ -14,6 +15,19 @@
 // fullName = `${firstName} ${lastName}`;
 // console.log(fullName);
 // 3 = BOOLEAN
-var a = true;
-console.log(a);
-console.log(typeof a);
+// let a: boolean = true;
+// console.log(a);
+// console.log(typeof a);
+// 4 = inference e type annotation
+const ann = 'João';
+let inf = 'João';
+// ann = 2;
+// inf = 2;
+console.log('testando');
+const firstName = 'João';
+const lastName = 'Magnun';
+console.log(firstName.toUpperCase() + ' ' + lastName.toUpperCase());
+const nameFriend = 'Joaquim';
+const lastNameFriend = 'Silva';
+let friend = `${nameFriend} ${lastNameFriend}`;
+console.log(friend);
