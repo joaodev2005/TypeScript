@@ -35,3 +35,12 @@
 // console.log(a);
 
 // console.log(typeof a);
+
+// 4 = inference e type annotation
+
+const ann: string = 'João';
+
+let inf = 'João';
+
+// ann = 2;
+// inf = 2;
