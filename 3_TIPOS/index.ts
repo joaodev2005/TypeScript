@@ -19,7 +19,7 @@ names.push("Pedro");
 
 // 2 - any
 
-const anyArray: any[] = [1, "teste", true, [], {nome: "Joaquim"}];
+const anyArray: any[] = [1, "teste", true, [], { nome: "Joaquim" }];
 
 anyArray.push(false);
 
@@ -30,7 +30,15 @@ anyArray.push(false);
 function sum(a: number, b: number) {
     let res = a + b;
 
-    console.log(res);
+    // console.log(res);
 }
 
 sum(1, 32);
+
+// 5 - retorno de função
+
+function sayHello(name: string): string {
+    return `Hello ${name}`
+}
+
+console.log(sayHello("Joaquim"))

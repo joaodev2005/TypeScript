@@ -16,6 +16,11 @@ anyArray.push(false);
 // 3 - parametros tipados
 function sum(a, b) {
     let res = a + b;
-    console.log(res);
+    // console.log(res);
 }
 sum(1, 32);
+// 5 - retorno de função
+function sayHello(name) {
+    return `Hello ${name}`;
+}
+console.log(sayHello("Joaquim"));
