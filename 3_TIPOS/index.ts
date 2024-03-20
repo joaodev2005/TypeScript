@@ -16,3 +16,11 @@ names.push("Joaquim");
 names.push("Pedro");
 
 // console.log(names)
+
+// 2 - any
+
+const anyArray: any[] = [1, "teste", true, [], {nome: "Joaquim"}];
+
+anyArray.push(false);
+
+console.log(anyArray)

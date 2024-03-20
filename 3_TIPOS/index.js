@@ -9,3 +9,7 @@ const names = ["João", "Maria"];
 names.push("Joaquim");
 names.push("Pedro");
 // console.log(names)
+// 2 - any
+const anyArray = [1, "teste", true, [], { nome: "Joaquim" }];
+anyArray.push(false);
+console.log(anyArray);
