@@ -72,3 +72,17 @@ function showNumbers(a: number, b: number, c?: number) {
 }
 
 showNumbers(1, 2, 3);
+
+// 9 - validando argumentos na chamada
+
+function myName(firstName: string, lastName?: string) {
+
+    if (lastName !== undefined) {
+        return `${firstName} ${lastName}`
+    } 
+
+    return firstName
+}
+
+console.log(myName("Joaquim", "Magalhães"))
+console.log(myName("Joaquim"))

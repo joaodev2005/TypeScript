@@ -40,3 +40,12 @@ function showNumbers(a, b, c) {
     // console.log(`a = ${a}, b = ${b}, c = ${c}`)
 }
 showNumbers(1, 2, 3);
+// 9 - validando argumentos na chamada
+function myName(firstName, lastName) {
+    if (lastName !== undefined) {
+        return `${firstName} ${lastName}`;
+    }
+    return firstName;
+}
+console.log(myName("Joaquim", "Magalhães"));
+console.log(myName("Joaquim"));
