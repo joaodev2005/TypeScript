@@ -23,4 +23,9 @@ sum(1, 32);
 function sayHello(name) {
     return `Hello ${name}`;
 }
-console.log(sayHello("Joaquim"));
+// console.log(sayHello("Joaquim"))
+// 6 - funções anonimas
+setTimeout(function () {
+    const sallary = 1000;
+    console.log(sallary);
+}, 2000);
