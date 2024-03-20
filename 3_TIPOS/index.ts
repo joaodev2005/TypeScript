@@ -23,4 +23,14 @@ const anyArray: any[] = [1, "teste", true, [], {nome: "Joaquim"}];
 
 anyArray.push(false);
 
-console.log(anyArray)
+// console.log(anyArray)
+
+// 3 - parametros tipados
+
+function sum(a: number, b: number) {
+    let res = a + b;
+
+    console.log(res);
+}
+
+sum(1, 32);

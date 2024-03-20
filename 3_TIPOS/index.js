@@ -12,4 +12,10 @@ names.push("Pedro");
 // 2 - any
 const anyArray = [1, "teste", true, [], { nome: "Joaquim" }];
 anyArray.push(false);
-console.log(anyArray);
+// console.log(anyArray)
+// 3 - parametros tipados
+function sum(a, b) {
+    let res = a + b;
+    console.log(res);
+}
+sum(1, 32);
