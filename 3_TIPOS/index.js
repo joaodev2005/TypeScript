@@ -35,3 +35,8 @@ function passCoordinates(point) {
 }
 const point = { x: 123100, y: 24400 };
 passCoordinates(point);
+// 8 - propriedades opcionais
+function showNumbers(a, b, c) {
+    // console.log(`a = ${a}, b = ${b}, c = ${c}`)
+}
+showNumbers(1, 2, 3);
