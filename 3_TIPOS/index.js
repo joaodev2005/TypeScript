@@ -27,5 +27,11 @@ function sayHello(name) {
 // 6 - funções anonimas
 setTimeout(function () {
     const sallary = 1000;
-    console.log(sallary);
+    // console.log(sallary);
 }, 2000);
+// 7 - tipos de objetos 
+function passCoordinates(point) {
+    // console.log(`x = ${point.x}, y = ${point.y}`)
+}
+const point = { x: 123100, y: 24400 };
+passCoordinates(point);
