@@ -47,5 +47,21 @@ function myName(firstName, lastName) {
     }
     return firstName;
 }
-console.log(myName("Joaquim", "Magalhães"));
-console.log(myName("Joaquim"));
+// console.log(myName("Joaquim", "Magalhães"))
+// console.log(myName("Joaquim"))
+// 10 - union types
+function showBalance(balance) {
+    // console.log(`O saldo da conta é R$ ${balance}`)
+}
+showBalance(100);
+showBalance("200");
+// 11 - avançando com union types
+function showUserRole(role) {
+    if (typeof role === "boolean") {
+        return "Usuário não aprovado";
+    }
+    return `A função do usuário é ${role}`;
+}
+// console.log(showUserRole('admin').toUpperCase())
+// console.log(showUserRole(false).toUpperCase())
+// 12 - type alias
