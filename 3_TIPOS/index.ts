@@ -120,4 +120,24 @@ function showId(id: ID) {
 }
 
 showId(32)
+
+// 13 - interfaces
+
+interface Point {
+    x: number;
+    y: number;
+    z?: number;
+}
  
+function showCoords(obj: Point) {
+
+    console.log(`x: ${obj.x}, y: ${obj.y}, z: ${obj.z}`)
+}
+
+const coordsObj: Point = {
+    x: 10,
+    y: 20,
+    z: 30
+}
+
+showCoords(coordsObj)

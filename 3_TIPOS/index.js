@@ -66,3 +66,12 @@ function showId(id) {
     console.log(`O ID é: ${id}`);
 }
 showId(32);
+function showCoords(obj) {
+    console.log(`x: ${obj.x}, y: ${obj.y}, z: ${obj.z}`);
+}
+const coordsObj = {
+    x: 10,
+    y: 20,
+    z: 30
+};
+showCoords(coordsObj);
