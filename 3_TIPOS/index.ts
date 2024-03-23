@@ -79,7 +79,7 @@ function myName(firstName: string, lastName?: string) {
 
     if (lastName !== undefined) {
         return `${firstName} ${lastName}`
-    } 
+    }
 
     return firstName
 }
@@ -116,7 +116,7 @@ type ID = string | number;
 
 function showId(id: ID) {
 
-    console.log(`O ID é: ${id}`)
+    // console.log(`O ID é: ${id}`)
 }
 
 showId(32)
@@ -128,7 +128,7 @@ interface Point {
     y: number;
     z?: number;
 }
- 
+
 function showCoords(obj: Point) {
 
     console.log(`x: ${obj.x}, y: ${obj.y}, z: ${obj.z}`)
@@ -141,3 +141,34 @@ const coordsObj: Point = {
 }
 
 showCoords(coordsObj)
+
+// 14 - interface x type alias
+
+interface Person {
+    name: string;
+}
+
+interface Person {
+    age: number;
+}
+
+const somePerson: Person = {
+    name: "Joaquim",
+    age: 30
+}
+
+// console.log(somePerson)
+
+// 15 - literal types
+
+let test: "testando" = "testando";
+
+console.log(test)
+
+function showDirection(direction: "left" | "right" | "center") {
+    console.log(`A direção é: ${direction}`)
+}
+
+showDirection("left")
+
+

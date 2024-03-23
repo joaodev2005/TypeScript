@@ -63,7 +63,7 @@ function showUserRole(role) {
     return `A função do usuário é ${role}`;
 }
 function showId(id) {
-    console.log(`O ID é: ${id}`);
+    // console.log(`O ID é: ${id}`)
 }
 showId(32);
 function showCoords(obj) {
@@ -75,3 +75,15 @@ const coordsObj = {
     z: 30
 };
 showCoords(coordsObj);
+const somePerson = {
+    name: "Joaquim",
+    age: 30
+};
+// console.log(somePerson)
+// 15 - literal types
+let test = "testando";
+console.log(test);
+function showDirection(direction) {
+    console.log(`A direção é: ${direction}`);
+}
+showDirection("left");
