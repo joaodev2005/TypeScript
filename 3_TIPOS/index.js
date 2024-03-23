@@ -87,3 +87,10 @@ function showDirection(direction) {
     console.log(`A direção é: ${direction}`);
 }
 showDirection("left");
+// 16 - non null assertion operator
+const p = document.getElementById("some-p");
+console.log(p.innerText);
+// 17 - bigint
+const n = 1000n;
+console.log(n);
+// 18 - symbol

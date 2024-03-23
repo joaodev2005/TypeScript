@@ -171,4 +171,17 @@ function showDirection(direction: "left" | "right" | "center") {
 
 showDirection("left")
 
+// 16 - non null assertion operator
+
+const p = document.getElementById("some-p");
+
+console.log(p!.innerText);
+
+// 17 - bigint
+
+const n: bigint = 1000n;
+
+console.log(n)
+
+// 18 - symbol
 
