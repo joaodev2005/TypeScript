@@ -94,3 +94,6 @@ console.log(p.innerText);
 const n = 1000n;
 console.log(n);
 // 18 - symbol
+const symbolA = Symbol("a");
+const symbolB = Symbol("a");
+console.log(symbolA === symbolB);

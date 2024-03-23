@@ -185,3 +185,8 @@ console.log(n)
 
 // 18 - symbol
 
+const symbolA: symbol = Symbol("a");
+
+const symbolB: symbol = Symbol("a");
+
+console.log(symbolA === symbolB)
