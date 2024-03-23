@@ -62,6 +62,7 @@ function showUserRole(role) {
     }
     return `A função do usuário é ${role}`;
 }
-// console.log(showUserRole('admin').toUpperCase())
-// console.log(showUserRole(false).toUpperCase())
-// 12 - type alias
+function showId(id) {
+    console.log(`O ID é: ${id}`);
+}
+showId(32);
