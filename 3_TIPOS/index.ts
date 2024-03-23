@@ -163,10 +163,10 @@ const somePerson: Person = {
 
 let test: "testando" = "testando";
 
-console.log(test)
+// console.log(test)
 
 function showDirection(direction: "left" | "right" | "center") {
-    console.log(`A direção é: ${direction}`)
+    // console.log(`A direção é: ${direction}`)
 }
 
 showDirection("left")
@@ -175,13 +175,13 @@ showDirection("left")
 
 const p = document.getElementById("some-p");
 
-console.log(p!.innerText);
+// console.log(p!.innerText);
 
 // 17 - bigint
 
 const n: bigint = 1000n;
 
-console.log(n)
+// console.log(n)
 
 // 18 - symbol
 
@@ -189,4 +189,5 @@ const symbolA: symbol = Symbol("a");
 
 const symbolB: symbol = Symbol("a");
 
-console.log(symbolA === symbolB)
+// console.log(symbolA === symbolB)
+

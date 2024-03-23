@@ -82,18 +82,18 @@ const somePerson = {
 // console.log(somePerson)
 // 15 - literal types
 let test = "testando";
-console.log(test);
+// console.log(test)
 function showDirection(direction) {
-    console.log(`A direção é: ${direction}`);
+    // console.log(`A direção é: ${direction}`)
 }
 showDirection("left");
 // 16 - non null assertion operator
 const p = document.getElementById("some-p");
-console.log(p.innerText);
+// console.log(p!.innerText);
 // 17 - bigint
 const n = 1000n;
-console.log(n);
+// console.log(n)
 // 18 - symbol
 const symbolA = Symbol("a");
 const symbolB = Symbol("a");
-console.log(symbolA === symbolB);
+// console.log(symbolA === symbolB)
