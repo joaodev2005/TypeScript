@@ -7,7 +7,13 @@ function App() {
 
   const name: string = 'Joaquim'
   const age: number = 23
-  const isWorking: boolean = false
+  const isWorking: boolean = true
+
+  // 2 - Funcoes
+
+  const useGreeting = (name: string): string => {
+    return `Ola ${name}`
+  }
 
   return (
     <>
@@ -16,6 +22,8 @@ function App() {
         <h2>Nome: {name}</h2>
         <p>Idade: {age}</p>
         <p>Esta trabalhando: {isWorking ? 'Sim' : 'Nao'}</p>
+
+        <h3>{useGreeting(name)}</h3>
       </div>
     </>
   )
