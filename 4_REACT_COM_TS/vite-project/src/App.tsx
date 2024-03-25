@@ -1,3 +1,4 @@
+import FirstComponents from './components/FirstComponents'
 
 import './App.css'
 
@@ -24,6 +25,8 @@ function App() {
         <p>Esta trabalhando: {isWorking ? 'Sim' : 'Nao'}</p>
 
         <h3>{useGreeting(name)}</h3>
+
+        <FirstComponents />
       </div>
     </>
   )
