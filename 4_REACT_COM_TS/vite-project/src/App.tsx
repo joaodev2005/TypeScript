@@ -1,9 +1,11 @@
 import FirstComponents from './components/FirstComponents'
 import SecondComponent from './components/SecondComponent'
-import Destructuring from './components/Destructuring'
+import Destructuring, { Category } from './components/Destructuring'
 import State from './components/State'
 
 import './App.css'
+
+type textOrNull = string | null
 
 function App() {
 
@@ -18,6 +20,13 @@ function App() {
   const useGreeting = (name: string): string => {
     return `Ola ${name}`
   }
+
+  // 3 - Tipos
+
+  const myName: textOrNull = 'Joaquim'
+  let m: textOrNull = null
+
+  m = 'opa'
 
   return (
     <>
@@ -38,10 +47,14 @@ function App() {
           content="Conteudo"
           commentsQty={10}
           tags={['Node', 'React', 'JavaScript', 'TypeScript', 'Next.js', 'Vite']}
+          category={Category.TS}
         />
 
         <State />
-        
+
+        {m && <p>Tem conteudo</p>}
+        {myName && <p>Tem conteudo</p>}
+
       </div>
     </>
   )
