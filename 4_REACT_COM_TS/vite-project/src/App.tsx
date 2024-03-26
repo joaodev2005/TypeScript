@@ -1,4 +1,6 @@
 import FirstComponents from './components/FirstComponents'
+import SecondComponent from './components/SecondComponent'
+import Destructuring from './components/Destructuring'
 
 import './App.css'
 
@@ -27,6 +29,15 @@ function App() {
         <h3>{useGreeting(name)}</h3>
 
         <FirstComponents />
+
+        <SecondComponent name="Paulo Guina" />
+
+        <Destructuring
+          title="Desestruturando"
+          content="Conteudo"
+          commentsQty={10}
+          tags={['Node', 'React', 'JavaScript', 'TypeScript', 'Next.js', 'Vite']}
+        />
       </div>
     </>
   )
