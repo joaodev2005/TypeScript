@@ -14,7 +14,7 @@ const Destructuring = ({ title, content, commentsQty, tags }: Props) => {
             <div>
                 {tags.map((tag) => (
                     <p>#{tag}</p>
-                ))}
+                ))} 
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 import FirstComponents from './components/FirstComponents'
 import SecondComponent from './components/SecondComponent'
 import Destructuring from './components/Destructuring'
+import State from './components/State'
 
 import './App.css'
 
@@ -38,6 +39,9 @@ function App() {
           commentsQty={10}
           tags={['Node', 'React', 'JavaScript', 'TypeScript', 'Next.js', 'Vite']}
         />
+
+        <State />
+        
       </div>
     </>
   )
