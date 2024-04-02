@@ -1,11 +1,22 @@
+import { createContext } from 'react'
+
 import FirstComponents from './components/FirstComponents'
 import SecondComponent from './components/SecondComponent'
 import Destructuring, { Category } from './components/Destructuring'
 import State from './components/State'
+import Context from './components/Context'
 
 import './App.css'
 
 type textOrNull = string | null
+
+interface IAppContext {
+  language: string
+  framework: string
+  projects: number
+}
+
+export const appContext = createContext<IAppContext | null>(null)
 
 function App() {
 
@@ -28,34 +39,48 @@ function App() {
 
   m = 'opa'
 
+  // 9 - context
+
+  const contextValue: IAppContext = {
+    language: 'TypeScript',
+    framework: 'React',
+    projects: 5,
+  };
+
   return (
     <>
-      <div className="App">
-        <h1>TS com React</h1>
-        <h2>Nome: {name}</h2>
-        <p>Idade: {age}</p>
-        <p>Esta trabalhando: {isWorking ? 'Sim' : 'Nao'}</p>
+      <appContext.Provider value={contextValue}>
 
-        <h3>{useGreeting(name)}</h3>
+        <div className="App">
+          <h1>TS com React</h1>
+          <h2>Nome: {name}</h2>
+          <p>Idade: {age}</p>
+          <p>Esta trabalhando: {isWorking ? 'Sim' : 'Nao'}</p>
 
-        <FirstComponents />
+          <h3>{useGreeting(name)}</h3>
 
-        <SecondComponent name="Paulo Guina" />
+          <FirstComponents />
 
-        <Destructuring
-          title="Desestruturando"
-          content="Conteudo"
-          commentsQty={10}
-          tags={['Node', 'React', 'JavaScript', 'TypeScript', 'Next.js', 'Vite']}
-          category={Category.TS}
-        />
+          <SecondComponent name="Paulo Guina" />
 
-        <State />
+          <Destructuring
+            title="Desestruturando"
+            content="Conteudo"
+            commentsQty={10}
+            tags={['Node', 'React', 'JavaScript', 'TypeScript', 'Next.js', 'Vite']}
+            category={Category.TS}
+          />
 
-        {m && <p>Tem conteudo</p>}
-        {myName && <p>Tem conteudo</p>}
+          <State />
 
-      </div>
+          {m && <p>Tem conteudo</p>}
+          {myName && <p>Tem conteudo</p>}
+
+          <Context />
+
+        </div>
+
+      </appContext.Provider>
     </>
   )
 }
