@@ -18,5 +18,21 @@ const day = new Date()
 
 enum colors {
     white = '#fff',
-    black = '#000'
+    black = '#000',
+    gray = '#ccc',
+    red = '#f00',
+    green = '#0f0',
+    blue = '#00f'
 }
+
+console.log(colors.white)
+
+enum typeUser {
+    ADMIN = 'ADMIN',
+    USER = 'USER',
+    SEO = 'SEO'
+}
+
+console.log(typeUser.USER)
+
+// const tpUser: typeUser = 'ADMIN' 

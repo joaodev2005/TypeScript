@@ -14,4 +14,16 @@ var colors;
 (function (colors) {
     colors["white"] = "#fff";
     colors["black"] = "#000";
+    colors["gray"] = "#ccc";
+    colors["red"] = "#f00";
+    colors["green"] = "#0f0";
+    colors["blue"] = "#00f";
 })(colors || (colors = {}));
+console.log(colors.white);
+var typeUser;
+(function (typeUser) {
+    typeUser["ADMIN"] = "ADMIN";
+    typeUser["USER"] = "USER";
+    typeUser["SEO"] = "SEO";
+})(typeUser || (typeUser = {}));
+console.log(typeUser.USER);
