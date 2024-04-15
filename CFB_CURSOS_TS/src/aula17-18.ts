@@ -1,11 +1,12 @@
 class Carr {
+    private id: number;
     public name: string;
-    public year: number;
-    public color: string;
-    public doors: number;
-    public manufacturer: string;
-    public motor: number;
-    public ligado: boolean;
+    private year: number;
+    private color: string;
+    private doors: number;
+    private manufacturer: string;
+    private motor: number;
+    private ligado: boolean;
 
     constructor() {
         console.log('Carro criado');
@@ -17,6 +18,7 @@ class Carr {
         this.manufacturer = 'Ferrari';
         this.motor = 2.0;
         this.ligado = false;
+        this.id = 0;
     }
 
     info(): void {
@@ -25,7 +27,7 @@ class Carr {
         console.log(`Cor:${this.color}`);
         console.log(`Portas:${this.doors}`);
         console.log(`Fabricante:${this.manufacturer}`);
-        console.log(`Motor:${this.motor}`);
+        console.log(`Motor:${this.motor} Cavalos`);
         console.log(`Ligado:${this.ligado?'Sim':'Não'}`);
     }
 
@@ -36,11 +38,23 @@ class Carr {
     desligar(): void {
         this.ligado = false;
     }
+
+    upMotor(qtd: number):void {
+        if(qtd >= 0 && qtd <= 10) {
+            this.motor = qtd
+        } else {
+            console.log('Quantidade inválida');
+        }
+    }
 }
 
 const carr = new Carr();
 
 carr.ligar()
-carr.desligar()
+carr.desligar();
+
+carr.name = 'Supra MK4';
+
+carr.upMotor(8.3);
 
 carr.info();
