@@ -1,65 +1,64 @@
+"use strict";
 class Conta {
-    private saldoConta: number;
-    protected numero: number;
-    protected titular: string;
-    private banco: string;
-
-    constructor(titular: string, banco: string) {
+    saldoConta;
+    numero;
+    titular;
+    banco;
+    constructor(titular, banco) {
         this.numero = this.gerarConta();
         this.titular = titular;
         this.banco = banco;
         this.saldoConta = 0;
     }
-
-    protected info(): void {
+    info() {
         console.log(`saldo da Conta: R$ ${this.saldoConta}`);
         console.log(`Conta: ${this.numero}`);
         console.log(`Titular: ${this.titular}`);
         console.log(`Sua agencia: ${this.banco}`);
     }
-
-    private gerarConta(): number {
+    gerarConta() {
         return Math.floor(Math.random() * 1000) + 1;
     }
-
-    public saldo(): number {
+    saldo() {
         return this.saldoConta;
     }
-
-    public depositar(qtd: number): void {
+    depositar(qtd) {
+        if (qtd < 0) {
+            console.log('Quantidade inválida');
+            return;
+        }
         this.saldoConta += qtd;
     }
-
-    public sacar(qtd: number): void {
-        if (qtd >= this.saldoConta) {
-            this.saldoConta -= qtd
+    sacar(qtd) {
+        if (qtd < 0) {
+            console.log('Saldo insuficiente');
+            return;
         }
-
-        console.log('Saldo insuficiente');
+        if (qtd <= this.saldoConta) {
+            this.saldoConta -= qtd;
+        }
+        else {
+            console.log('Saldo insuficiente');
+        }
     }
 }
-
 class ContaPf extends Conta {
-    cpf: number
-
-    constructor(cpf: number, titular: string, banco: string) {
-        super(titular, banco)
-        this.cpf = cpf
+    cpf;
+    constructor(cpf, titular, banco) {
+        super(titular, banco);
+        this.cpf = cpf;
     }
-
     info() {
-        console.log('=====Tipo de conta PF=====')
-        super.info()
-        console.log(`CPF: ${this.gerarCpf()}`)
-        console.log('-------------------------')
+        console.log('=====Tipo de conta PF=====');
+        super.info();
+        console.log(`CPF: ${this.gerarCpf()}`);
+        console.log('-------------------------');
     }
-
     gerarCpf() {
         let cpf = '';
         for (let i = 0; i < 9; i++) {
             cpf += Math.floor(Math.random() * 10);
         }
-
         let soma = 0;
         for (let i = 0; i < 9; i++) {
             soma += parseInt(cpf.charAt(i)) * (10 - i);
@@ -69,7 +68,6 @@ class ContaPf extends Conta {
             primeiroDigito = 0;
         }
         cpf += primeiroDigito;
-
         soma = 0;
         for (let i = 0; i < 10; i++) {
             soma += parseInt(cpf.charAt(i)) * (11 - i);
@@ -79,52 +77,62 @@ class ContaPf extends Conta {
             segundoDigito = 0;
         }
         cpf += segundoDigito;
-
         return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
     }
-
-    public depositar(valor: number): void {
+    depositar(valor) {
         if (valor > 1000) {
             console.log('Depósito inválido');
-        } else {
-            super.depositar(valor)
+        }
+        else {
+            super.depositar(valor);
+        }
+    }
+    saque(valor) {
+        if (valor > 1000) {
+            console.log('Saque inválido');
+        }
+        else {
+            super.sacar(valor);
         }
     }
 }
 class ContaPj extends Conta {
-    cnpj: number
-    constructor(cnpj: number, titular: string, banco: string) {
-        super(titular, banco)
-        this.cnpj = cnpj
+    cnpj;
+    constructor(cnpj, titular, banco) {
+        super(titular, banco);
+        this.cnpj = cnpj;
     }
-
     info() {
-        console.log('=====Tipo de conta PJ=====')
-        super.info()
-        console.log(`CNPJ: ${this.gerarCnpj()}`)
+        console.log('=====Tipo de conta PJ=====');
+        super.info();
+        console.log(`CNPJ: ${this.gerarCnpj()}`);
     }
-
-    gerarCnpj(): number {
-        return Math.floor(Math.random() * 10000000000000) + 1
+    gerarCnpj() {
+        return Math.floor(Math.random() * 10000000000000) + 1;
     }
-
-    public depositar(valor: number): void {
+    depositar(valor) {
         if (valor > 10000) {
             console.log('Depósito inválido');
-        } else {
-            super.depositar(valor)
+        }
+        else {
+            super.depositar(valor);
+        }
+    }
+    saque(valor) {
+        if (valor > 10000) {
+            console.log('Saque inválido');
+        }
+        else {
+            super.sacar(valor);
         }
     }
 }
-
 const conta = new ContaPf(133, 'João', 'Banco do Brasil');
 const conta2 = new ContaPj(3455674, 'Claiton', 'Banco black');
-
-// conta.info();
-// conta2.info();
-
 conta.depositar(1000);
 conta2.depositar(4900);
-
+conta2.depositar(100);
+conta.saque(1000);
+conta.saque(10);
 console.log(conta.saldo());
 console.log(conta2.saldo());
