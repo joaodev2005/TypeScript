@@ -22,8 +22,12 @@ class Conta {
         return Math.floor(Math.random() * 1000) + 1;
     }
 
-    public saldo(): number {
+    get saldo(): number {
         return this.saldoConta;
+    }
+
+    set saldo(saldoConta: number) {
+        this.saldoConta = saldoConta;
     }
 
     protected depositar(qtd: number): void {
@@ -153,8 +157,7 @@ conta.depositar(1000);
 conta2.depositar(4900);
 conta2.depositar(100);
 
-conta.saque(1000);
-conta.saque(10);
+conta.saldo = 37666666
 
-console.log(conta.saldo());
-console.log(conta2.saldo());
+console.log(conta.saldo);
+console.log(conta2.saldo);
