@@ -1,6 +1,6 @@
-class Conta {
+abstract class Conta {
     private saldoConta: number;
-    protected numero: number;
+    private readonly numero: number;
     protected titular: string;
     private banco: string;
 
@@ -113,7 +113,7 @@ class ContaPf extends Conta {
         }
     }
 }
-class ContaPj extends Conta { 
+class ContaPj extends Conta {
     cnpj: number
     constructor(cnpj: number, titular: string, banco: string) {
         super(titular, banco)
@@ -149,6 +149,7 @@ class ContaPj extends Conta {
 
 const conta = new ContaPf(133, 'João', 'Banco do Brasil');
 const conta2 = new ContaPj(3455674, 'Claiton', 'Banco black');
+
 
 // conta.info();
 // conta2.info();
